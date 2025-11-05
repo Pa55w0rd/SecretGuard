@@ -197,7 +197,7 @@ A: 支持，Token需 `repo` 权限（谨慎使用）。
 
 ## 🔧 配套工具
 
-**云密钥批量收集**: [cloud_ak_collector](https://github.com/Pa55w0rd/cloud_ak_collector)  
+**云密钥批量收集**: [cloud_ak_collector](https://github.com/Pa55w0rd/Cloud-AK-Collector)  
 支持华为云、阿里云、Authing，一键获取所有用户AK/SK
 
 ---
