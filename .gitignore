@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+# 但不忽略示例文件
+!env.example
+!.env.example
+
+# Scan reports - 提交到仓库以保留历史记录
+# scan_reports/ - 不忽略，需要提交到仓库
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+temp_repos/
+
+# === 密钥清单文件（重要！不要提交到仓库）===
+# 监控模式使用的密钥清单文件
+secrets_to_monitor.txt
+my_secrets.txt
+*.secrets
+
+# === 白名单配置文件 ===
+whitelist.yaml
+*_secrets.txt
+
+# 自定义密钥清单
+custom_secrets_*.txt
+
+# cloud_ak_collector 敏感文件
+cloud_ak_collector/config.yaml
+cloud_ak_collector/output/
+cloud_ak_collector/

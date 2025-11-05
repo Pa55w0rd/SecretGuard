@@ -1,0 +1,45 @@
+# 白名单配置文件
+# 用于排除不需要监控的仓库和文件
+
+# 仓库白名单
+repositories:
+  # 格式: owner/repo
+  - "mycompany/test-repo"
+  - "username/demo-project"
+  # 支持通配符
+  - "mycompany/test-*"  # 匹配 mycompany/test- 开头的所有仓库
+
+# 文件白名单
+files:
+  # 精确匹配（根目录文件）
+  - "demo.py"             # 匹配根目录的 demo.py
+  - "test.txt"            # 匹配根目录的 test.txt
+  
+  # 匹配文件名（任意目录）
+  - "*demo*"              # 匹配文件名包含 demo 的文件
+  - "*test*"              # 匹配文件名包含 test 的文件
+  - "*.md"                # 匹配所有 markdown 文件（根目录）
+  
+  # 匹配目录下的所有文件（使用 **）
+  - "test/**/*"           # test目录下的所有文件
+  - "examples/**/*"       # examples目录下的所有文件
+  - "docs/**/*"           # docs目录下的所有文件
+  
+  # 匹配任意目录的特定文件
+  - "**/*.md"             # 任意目录的 markdown 文件
+  - "**/test_*.py"        # 任意目录下 test_ 开头的 Python 文件
+  - "**/*example*"        # 任意目录下文件名包含 example 的文件
+
+# 说明：
+# - 仓库名必须是完整的 owner/repo 格式，支持 * 通配符
+# - 文件路径支持 glob 通配符：
+#   * 匹配任意字符（不包括 /）
+#   ** 匹配任意层级目录
+# - 示例：
+#   "demo.py" → 匹配根目录的 demo.py
+#   "*demo*" → 匹配文件名包含 demo（如 demo.py, test_demo.txt）
+#   "test/**/*" → 匹配 test 目录下所有文件
+#   "**/*demo*" → 匹配任意目录下文件名包含 demo 的文件
+# - 白名单优先级高于扫描结果，匹配的泄露将被过滤
+# - 留空或删除某个部分则不启用该类型的白名单
+
